@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=8; IE=7; IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}sample{% endblock %}</title>
+    <link rel="stylesheet" href='{% static "css/lib/bootstrap.min.css" %}'>
+    <link rel="stylesheet" href='{% static "css/base.css" %}'>
+    <link rel="stylesheet" href='{% static "css/lib/font-awesome.min.css" %}'>
+</head>
+<body>
+  {% block body %}{% endblock %}
+  <script src='{% static "js/lib/bootstrap.min.js" %}'></script>
+  <!-- <div>2</div>
+  {% block content %}{% endblock %}
+  <div>3</div> -->
+<!-- 위에 코드는 html에있는 기능이 아니라 django에서 제공해주는 기능이다.
+block의 역할은 html문서에 구멍을 뚫어 놓고 그 구멍에 특정한 정보를 추가한다. -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+/*static이란 고정되어있다는 의미.
+프로그래밍을 하는 동안 바뀌지 않는 파일이다.
+css파일들이 가장 대표적인데 웹 사이트를 사용하는 과정에서 바뀌지 않는다.
+이것을 로드하는 방법
+https://docs.djangoproject.com/en/1.10/howto/static-files/
+샘플의 셋팅 css 검색
+*/
+.colorful-text {
+  color: white;
+
+  padding: 10px;
+  background-color: #222222;
+}
