@@ -16,13 +16,21 @@
       </div>
       <div>
         {% for comment in article.article_comments.all %}
-          <div>{{ comment.username }} : {{ comment.content }}</div>
+          <div class="comment-box">
+            <div class="comment-username">
+              {{ comment.username }}
+            </div>
+            <div class="comment-content">
+              {{ comment.content }}
+            </div>
+          </div>
         {% endfor%}
       </div>
       <div class="reply-form">
         <form method="post" action="" class="form-horizontal">
           {% csrf_token %}
           <!-- 신경써야하는 보안적인 부분을 이 친구가 알아서 처리해준다. -->
+          <div class="comment-input">
             <div class="form-group">
               <div class="col-sm-3">
                 <input placeholder="User" class="form-control" name="username"/>
@@ -30,14 +38,15 @@
             </div>
             <div class="form-group">
               <div class="col-sm-6">
-                <input placeholder="Content" class="form-control" name="content"/>
+                <input placeholder="Leave a comment" class="form-control" name="content"/>
               </div>
             </div>
             <div class="form-group">
-              <div class="col-sm-offset-8 col-sm-10">
-                <button class="btn btn-default" type="submit">Post a comment</button>
+              <div class="col-sm-offset-9">
+                <button class="btn btn-success" type="submit">Comment</button>
               </div>
             </div>
+          </div>
         </form>
       </div>
     </div>
