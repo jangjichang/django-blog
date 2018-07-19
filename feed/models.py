@@ -16,6 +16,7 @@ class Article(models.Model):
     )
 
     title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=200)
     content = models.TextField()
     category = models.CharField(
         max_length=2,
@@ -36,7 +37,7 @@ class Comment(models.Model):
         on_delete=models.CASCADE)
     username = models.CharField(max_length=50)
     content = models.CharField(max_length=200)
-
+    show = models.BooleanField(default=False)
     def __str__(self):
         return "\'{}\'s comment -> \"{}\"".format(self.article.title, self.content)
 

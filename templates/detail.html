@@ -5,7 +5,7 @@
 <div class="container">
   <div class="blog-header">
     <h1 class="blog-title">{{ article.title }}</h1>
-    <p class="lead blog-description">The official blog about Self Dev</p>
+    <p class="lead blog-description">{{ article.subtitle }}</p>
   </div>
   <div class="row">
     <!-- col을 쓸 때는 <div class="row">로 덮어준다. -->
@@ -16,6 +16,7 @@
       </div>
       <div>
         {% for comment in article.article_comments.all %}
+          {% if comment.show == True %}
           <div class="comment-box">
             <div class="comment-username">
               {{ comment.username }}
@@ -24,6 +25,7 @@
               {{ comment.content }}
             </div>
           </div>
+          {% endif %}
         {% endfor%}
       </div>
       <div class="reply-form">
@@ -42,7 +44,7 @@
               </div>
             </div>
             <div class="form-group">
-              <div class="col-sm-offset-9">
+              <div class="col-sm-offset-10">
                 <button class="btn btn-success" type="submit">Comment</button>
               </div>
             </div>

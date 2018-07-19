@@ -94,10 +94,11 @@ https://docs.djangoproject.com/en/1.10/howto/static-files/
 .comment-input {
   border: 1px solid #d1d5da;
   border-radius: 3px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 5%;
 }
 
-.abbb {
-  padding-top: 15px;
-  margin-top: 15px;
-  border-top: 15px;
+.test {
+  display: block;
 }
